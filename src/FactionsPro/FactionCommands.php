@@ -4,17 +4,17 @@ namespace FactionsPro;
 
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
-use pocketmine\level\Position;
+use pocketmine\world\Position;
 
 class FactionCommands {
 
     public $plugin;
 
-    public function __construct(FactionMain $pg) {
-        $this->plugin = $pg;
+    public function __construct(FactionMain $plugin) {
+        $this->plugin = $plugin;
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
